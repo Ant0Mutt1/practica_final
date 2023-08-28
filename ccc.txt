@@ -23,3 +23,11 @@ usar variables
 #f251e0
 #f13adb
 #e811cf
+
+
+
+secciones basicas
+-home: nombre, pequeña frase donde diga quien sos y que haces
+-words: 
+-about:resumen de tu experiencia. con github
+-contacto
