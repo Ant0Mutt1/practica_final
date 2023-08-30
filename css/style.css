@@ -117,8 +117,6 @@ span {
     background-image: url(/img/fondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-
-
 }
 .home span{
     background-color: var(--color-4);
@@ -154,7 +152,8 @@ h2{
     border-color: white;
     color: white;
 }
-.tecnologias{
+
+.tecnologias_container{
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -162,20 +161,25 @@ h2{
     gap: 10px;
     color: white;
 }
-.tecnologias span{
+.tecnologias_container span{
     background-color: var(--color-2);
     padding: 7px 20px;
     border-radius: 20px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.603);
-
 }
 
-
-.tecnologias span:hover{
+.tecnologias img{
+    filter: invert(100%);
+}
+.tecnologias_container span:nth-child(odd):hover{
     transform: rotate(7deg); 
     transition: transform 0.3s ease; 
-
 }
+.tecnologias_container span:nth-child(even):hover{
+    transform: rotate(-7deg); 
+    transition: transform 0.3s ease; 
+}
+
 .trabajos__container{
     display: flex;
     flex-wrap: wrap;
@@ -200,11 +204,33 @@ h2{
 
 .trabajos__img:hover{ 
     transform: scale(1.15);
-    transition: transform 0.3s ease; 
+    transition: transform 0.5s ease;  
+
 }
 .trabajos__img_cont:hover{
     overflow: hidden;
 
+}
+
+.card{
+    width:90% ;
+    margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card__img{
+    width: 200px;
+    height: 200px;
+}
+
+.card__img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid var(--color-4);
 }
 
 
