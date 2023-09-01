@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,300;0,500;1,100;1,200;1,300;1,400;1,500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+:root {
+    --color-1: #4e3b6b;
+    --color-2: #6711e8;
+    --color-3: #7c2ff0;
+    --color-4: #c2b8d1;
+    --color-5: #9a8ab2;
+    --color-6: #735f91;
+    --color-7: #36323d;
+
+    --font-1: "eurostile", sans-serif;
+    --font-2: "europa", sans-serif;
+    --font-3: 'Barlow Condensed', sans-serif;
+    --font-4: 'Montserrat', sans-serif;
+}

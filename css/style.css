@@ -1,31 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,300;0,500;1,100;1,200;1,300;1,400;1,500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
-/* font-family: 'Barlow Condensed', sans-serif;
-font-family: 'Montserrat', sans-serif; */
-
-:root {
-    --color-1: #4e3b6b;
-    --color-2: #6711e8;
-    --color-3: #7c2ff0;
-    --color-4: #c2b8d1;
-    --color-5: #9a8ab2;
-    --color-6: #735f91;
-    --color-7: #36323d;
-
-    --font-1: "eurostile", sans-serif;
-    --font-2: "europa", sans-serif;
-    --font-3: 'Barlow Condensed', sans-serif;
-    --font-4: 'Montserrat', sans-serif;
-}
+@import url('normalize.css');
+@import url('variables.css');
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
+body {
     background-color: var(--color-7);
 }
+
 h1,
 h2,
 h3 {
@@ -59,7 +39,9 @@ span {
     font-size: 1.5rem;
     font-weight: 900;
 }
-.nav__label, .nav__input {
+
+.nav__label,
+.nav__input {
     display: none;
 }
 
@@ -106,7 +88,8 @@ span {
 .nav__item:hover {
     --clippy: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
-.home{
+
+.home {
     height: 100vh;
     padding: 0 30px;
     display: flex;
@@ -118,7 +101,8 @@ span {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.home span{
+
+.home span {
     background-color: var(--color-4);
     align-self: flex-start;
     padding: 7px 10px;
@@ -127,33 +111,35 @@ span {
 }
 
 .home span:hover {
-    transform: scale(1.1); 
-    transition: transform 0.4s ease; 
-  }
-h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    text-transform: capitalize;
-}
-h2{
-    font-size: 1rem;
-    font-weight: 200;
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
 }
 
-.home a{
+h1 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: 1px white;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+.home a {
     color: var(--color-4);
-    border: 1px solid var(--color-4) ;
+    border: 1px solid var(--color-4);
     padding: 5px 10px;
     text-decoration: none;
     font-weight: 300;
-    
 }
-.home a:hover{
+
+.home a:hover {
     border-color: white;
     color: white;
 }
 
-.tecnologias_container{
+.tecnologias_container {
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -161,71 +147,66 @@ h2{
     gap: 10px;
     color: white;
 }
-.tecnologias_container span{
+
+.tecnologias_container span {
     background-color: var(--color-2);
     padding: 7px 20px;
     border-radius: 20px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.603);
 }
 
-.tecnologias img{
+.tecnologias img {
     filter: invert(100%);
 }
-.tecnologias_container span:nth-child(odd):hover{
-    transform: rotate(7deg); 
-    transition: transform 0.3s ease; 
-}
-.tecnologias_container span:nth-child(even):hover{
-    transform: rotate(-7deg); 
-    transition: transform 0.3s ease; 
+
+.tecnologias_container span:nth-child(odd):hover {
+    transform: rotate(7deg);
+    transition: transform 0.3s ease;
 }
 
-.trabajos__container{
+.tecnologias_container span:nth-child(even):hover {
+    transform: rotate(-7deg);
+    transition: transform 0.3s ease;
+}
+
+.trabajos__container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     width: 90%;
     margin: auto;
     list-style: none;
-
 }
-.trabajos__item{
+
+.trabajos__item {
     width: 100%;
     background-color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.603);
 }
 
-.trabajos__img{
-    display: block;
-    /* object-fit: cover; */
-    width: 100%;
-    /* height: 100%; */
-}
-
-.trabajos__img:hover{ 
+.trabajos__img:hover {
     transform: scale(1.15);
-    transition: transform 0.5s ease;  
-
+    transition: transform 0.5s ease;
 }
-.trabajos__img_cont:hover{
+
+.trabajos__img_cont:hover {
     overflow: hidden;
-
 }
 
-.card{
-    width:90% ;
+.card {
+    width: 90%;
     margin: 30px auto;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.card__img{
+
+.card__img {
     width: 200px;
     height: 200px;
 }
 
-.card__img img{
+.card__img img {
     object-fit: cover;
     width: 100%;
     height: 100%;
