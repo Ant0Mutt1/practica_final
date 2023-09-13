@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
 </head>
 <body>
     <header>
         <div class="nav">
             <div class="nav__container">
-                <span class="nav_logo">AntoDEV</span>
+                <!-- <i class="devicon-devicon-plain nav_logo"></i> -->
+
                 <label for="menu" class="nav__label">
                     <img src="./icon/menu.png" alt="menu hamburguesa" class="nav__img">
                 </label>
@@ -33,7 +38,7 @@
             <h2>Soy Antonella Mutti. Desarrolladora Web y algo más sobre mí</h2>
             <a href="#">Contactame</a>
         </section>
-        <section class="tecnologias">
+        <section class="tecnologias" data-aos="flip-left">
             <h2>Tecnologías</h2>
             <div class="tecnologias_container">
                 <span><i class="fa-brands fa-python"></i> Python</span>
@@ -48,9 +53,9 @@
 
         </section>
         <section class="trabajos"></section>
-            <h2>Proyectos</h2>
+            <h2 class="titulo_trabajos">explora mis <span class="span_titulo">creaciones.</span></h2>
             <ul class="trabajos__container">
-                <li class="trabajos__item">
+                <li class="trabajos__item ">
                     <div class="trabajos__img_cont">
                         <img src="./img/proyectos.jpg" alt="" class="trabajos__img">
                     </div>
@@ -75,7 +80,7 @@
                     <a href="#" class="trabajos__links">github</a>
                 </li>
             </ul>
-        <section class="about">
+        <section class="about"  data-aos="fade-right">
             <div class="card">
                 <div class="card__img">
                     <img src="./img/proyectos.jpg" alt="">
@@ -93,5 +98,7 @@
         <section class="contact"></section>
     </main>
     <footer></footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

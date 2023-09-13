@@ -36,7 +36,7 @@ span {
 }
 
 .nav__logo {
-    font-size: 1.5rem;
+    font-size: 32px;
     font-weight: 900;
 }
 
@@ -168,6 +168,10 @@ h2 {
     transform: rotate(-7deg);
     transition: transform 0.3s ease;
 }
+.titulo_trabajos{
+    font-family: var(--font-4);
+    padding: 20px;
+}
 
 .trabajos__container {
     display: flex;
@@ -180,17 +184,48 @@ h2 {
 
 .trabajos__item {
     width: 100%;
-    background-color: white;
+}
+
+.trabajos__img_cont{
+    position: relative;    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.519);
+}
+
+.trabajos__links{
+    background-color: var(--color-6);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.603);
+    display: block;
+    border-radius: 10px;
+    padding: 5px 50px;
+    margin: 10px 0;
+    text-align: center;
 }
 
-.trabajos__img:hover {
-    transform: scale(1.15);
-    transition: transform 0.5s ease;
+.trabajos_info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.613);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.trabajos__img_cont:hover {
-    overflow: hidden;
+.trabajos_info p{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Jost', sans-serif;
+}
+
+.trabajos_info span{
+    background-color: var(--color-2);
+    padding: 7px 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.603);
 }
 
 .card {
