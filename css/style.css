@@ -23,6 +23,7 @@ span {
     background-color: var(--color-1);
     height: 80px;
     color: #fff;
+    border-bottom: 1px solid gray;
 }
 
 .nav__container {
@@ -98,9 +99,26 @@ span {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    background-color: var(--color-7);
+    background-image: linear-gradient(40deg,
+            hsl(262deg 10% 22%) 0%,
+            hsl(262deg 13% 23%) 12%,
+            hsl(262deg 15% 24%) 24%,
+            hsl(262deg 18% 25%) 35%,
+            hsl(262deg 20% 27%) 46%,
+            hsl(263deg 22% 28%) 57%,
+            hsl(263deg 24% 29%) 68%,
+            hsl(263deg 26% 30%) 79%,
+            hsl(263deg 27% 31%) 89%,
+            hsl(264deg 29% 33%) 100%);
 }
-
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 .home span {
     background-color: var(--color-4);
     align-self: flex-start;
@@ -116,6 +134,11 @@ span {
 h1 {
     font-size: 2rem;
     text-transform: capitalize;
+    background-image: linear-gradient(to right, #44B04D, #468847);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
 }
 
 h2 {
@@ -128,7 +151,7 @@ h2 {
     border: 1px solid var(--color-4);
     padding: 5px 10px;
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .home a:hover {
@@ -136,9 +159,7 @@ h2 {
     color: white;
 }
 
-.imagen{
-    height: 100px;
-}
+
 .tecnologias_container {
     padding: 50px;
     display: flex;
@@ -155,10 +176,6 @@ h2 {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.603);
 }
 
-.tecnologias img {
-    filter: invert(100%);
-}
-
 .tecnologias_container span:nth-child(odd):hover {
     transform: rotate(7deg);
     transition: transform 0.3s ease;
@@ -168,7 +185,8 @@ h2 {
     transform: rotate(-7deg);
     transition: transform 0.3s ease;
 }
-.titulo_trabajos{
+
+.titulo_trabajos {
     font-family: var(--font-4);
     padding: 20px;
 }
@@ -186,12 +204,12 @@ h2 {
     width: 100%;
 }
 
-.trabajos__img_cont{
-    position: relative;    
+.trabajos__img_cont {
+    position: relative;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.519);
 }
 
-.trabajos__links{
+.trabajos__links {
     background-color: var(--color-4);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.603);
     display: block;
@@ -201,7 +219,7 @@ h2 {
     text-align: center;
 }
 
-.trabajos_info{
+.trabajos_info {
     position: absolute;
     top: 0;
     left: 0;
@@ -216,24 +234,28 @@ h2 {
     flex-wrap: wrap;
 }
 
-.trabajos_info p{
+.trabajos_info p {
     color: white;
     font-size: 25px;
     font-weight: bold;
     font-family: 'Jost', sans-serif;
+    padding: 0 7px;
 }
 
-.trabajos_tag{
+.trabajos_tag {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
+    padding: 0 5px;
 }
-.trabajos_info span{
-    background-color: var(--color-2);
-    padding: 7px 20px;
+
+.trabajos_info span {
+    font-size: 1rem;
+    background-color: var(--color-8);
+    padding: 3px 7px;
     border-radius: 20px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.603);
+    color: white;
 }
 
 .card {
@@ -280,26 +302,53 @@ h2 {
 }
 
 @media (min-width: 768px) {
-    .tecnologias_container{
+    .tecnologias_container {
         max-width: 760px;
         margin: 0 auto;
     }
 }
 
 @media (min-width: 992px) {
-    .tecnologias_container, .trabajos__container{
+    .home{
+        flex-direction: row;
+    }
+    .presentacion{
+        width: 49%;
+        flex-wrap: nowrap;
+    }
+    .imagen{
+        width: 48%;
+    }
+    .tecnologias_container,
+    .trabajos__container {
         max-width: 768px;
     }
 
-    .trabajos__item{
+    .trabajos__item {
         max-width: 45%;
+    }
+    .card{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .card__content{
+        width: 70%;
+        border-bottom:1px solid ;
+        padding: 10px;
     }
 }
 
 @media (min-width: 1200px) {
-    
+
+    h1{
+        font-size: 5rem;
+    }
+    .tecnologias_container{
+        gap: 15px;
+    }
+    .tecnologias_container span{
+        font-size: 1.5rem;
+    }
 }
 
-@media (min-width: 1400px) {
-    
-}
+@media (min-width: 1400px) {}

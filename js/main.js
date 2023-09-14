@@ -2,33 +2,32 @@ AOS.init();
 
 let arr=[
     {
-        "nombre_proyecto": "titulo1",
+        "nombre_proyecto": "CRUD App Desktop ",
         "tecnologias": [
             "python",
-            "django",
-            "html"
         ]
     },
     {
-        "nombre_proyecto": "titulo2",
+        "nombre_proyecto": "Web App con Django",
+        "tecnologias": [
+            "django",
+            "html",
+            "css",
+            "js",
+        ]
+    },
+    {
+        "nombre_proyecto": "SynthWaveFest",
         "tecnologias": [
             "html",
             "css"
         ]
     },
     {
-        "nombre_proyecto": "titulo3",
+        "nombre_proyecto": "Web Educativa",
         "tecnologias": [
-            "python",
-            "django",
             "html",
             "css"
-        ]
-    },
-    {
-        "nombre_proyecto": "titulo4",
-        "tecnologias": [
-            "python"
         ]
     }
 ]
