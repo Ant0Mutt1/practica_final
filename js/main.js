@@ -12,9 +12,8 @@ let arr=[
     {
         "nombre_proyecto": "titulo2",
         "tecnologias": [
-            "python",
-            "django",
-            "html"
+            "html",
+            "css"
         ]
     },
     {
@@ -22,77 +21,41 @@ let arr=[
         "tecnologias": [
             "python",
             "django",
-            "html"
+            "html",
+            "css"
         ]
     },
     {
         "nombre_proyecto": "titulo4",
         "tecnologias": [
-            "python",
-            "django",
-            "html"
+            "python"
         ]
     }
 ]
 
-
-// let div_element;
-// let p;
-// let tags;
-// const elementos = document.querySelectorAll('.trabajos__img_cont');
-// elementos.forEach(elemento => elemento.addEventListener("mouseenter", () => {
-//     div_element = document.createElement('div');
-//     p = document.createElement('p');
-//     tags = document.createElement('span');
-//     tags.textContent = 'python';
-//     p.textContent = 'trabajo django';
-//     div_element.appendChild(p);
-//     div_element.appendChild(tags);
-//     div_element.classList.add('trabajos_info');
-//     elemento.appendChild(div_element)
-// }
-// ));
-
-
-// elementos.forEach(elemento => elemento.addEventListener("mouseleave", () => div_element.remove()))
-
-
-let div_element, p ,tags, contador=0;
+let div_element, div_tags, p, tags;
 
 const elementos = document.querySelectorAll('.trabajos__img_cont');
 
-// .forEach(elemento => elemento.addEventListener("mouseenter", () => {
-//     div_element = document.createElement('div');
-//     p = document.createElement('p');
-//     tags = document.createElement('span');
-//     tags.textContent = 'python';
-//     p.textContent = arr[contador]['nombre_proyecto'];
-//     div_element.appendChild(p);
-//     div_element.appendChild(tags);
-//     div_element.classList.add('trabajos_info');
-//     elemento.appendChild(div_element);
-//     contador++;
-//     if(contador==4){contador=0}
-// }
-// ));
+elementos.forEach((elemento, i )=> elemento.addEventListener("mouseenter", () => {
+    div_element = document.createElement('div');
+    div_tags = document.createElement('div');
+    p = document.createElement('p');
 
-for(var i = 0; i < arr.length; i++){
-    elementos[i].addEventListener("mouseenter", () => {
-            div_element = document.createElement('div');
-            p = document.createElement('p');
-            tags = document.createElement('span');
-            tags.textContent = 'python';
-            p.textContent = arr[i]['nombre_proyecto'];
-            div_element.appendChild(p);
-            div_element.appendChild(tags);
-            div_element.classList.add('trabajos_info');
-            elemento.appendChild(div_element);
+    p.textContent = arr[i]['nombre_proyecto'];
+    div_element.appendChild(p);
 
-        }
-    )        
+    arr[i]['tecnologias'].forEach((tag, j)=>{
+        span_tag = document.createElement('span');    
+        span_tag.textContent = arr[i]['tecnologias'][j];  
+        div_tags.appendChild(span_tag);
+    })
+
+    div_tags.classList.add('trabajos_tag')
+    div_element.appendChild(div_tags)
+    div_element.classList.add('trabajos_info');
+    elemento.appendChild(div_element);
 }
-
+));
 
 elementos.forEach(elemento => elemento.addEventListener("mouseleave", () => div_element.remove()))
-
-console.log(elementos);
