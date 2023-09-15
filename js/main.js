@@ -81,3 +81,7 @@ elementos.forEach((elemento, i )=> elemento.addEventListener("touchstart", () =>
 ));
 elementos.forEach(elemento => elemento.addEventListener("touchend", () => div_element.remove()))
 
+const items = document.querySelectorAll('.nav__item');
+let menu = document.getElementById('menu');
+
+items.forEach(item => item.addEventListener("click", ()=> {menu.checked = false}) );

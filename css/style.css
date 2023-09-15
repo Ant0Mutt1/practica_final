@@ -61,7 +61,7 @@ span {
     justify-content: space-evenly;
     flex-direction: column;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: clip-path 1s ease-in-out;
+    transition: all .5;
 }
 
 .nav__input:checked+.nav__menu {
@@ -69,9 +69,11 @@ span {
 }
 
 .nav__item {
+    text-align: center;
     color: #fff;
     text-decoration: none;
     --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    padding: 10px;
 }
 
 .nav__item::after {
@@ -114,8 +116,8 @@ span {
 
 h2 {
     font-family: var(--font-4);
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 700;
     text-align: center;
     padding: 20px;
 }
@@ -146,11 +148,9 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    padding: 20px;
+}
 
-}
-.home h2{
-    text-align: start;
-}
 .home a {
     color: var(--color-4);
     border: 1px solid var(--color-4);
@@ -235,6 +235,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border-radius: 10px;
 }
 
 .trabajos_info p {
@@ -269,7 +270,8 @@ h1 {
     flex-direction: column;
     align-items: center;
     background-color: white;
-    padding: 10px;
+    padding: 30px;
+
 }
 
 .card__img {
@@ -287,9 +289,36 @@ h1 {
 
 .card__content{
     padding: 20px;
-}
 
+}
+.card__content h2{
+    color: black;
+}
+.contacto_cantainer{
+    max-width: 300px;
+    margin: 20px auto;
+
+    height:150px;
+    background-color: var(--color-1);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid var(--color-8);
+}
+.contacto_cantainer a{
+    font-size: 2rem;
+}
+footer p{
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
 @media (min-width: 576px) {
+    h1{
+        font-size: 2.5rem;
+    }
     .nav__container {
         justify-content: space-evenly;
         align-items: center;
@@ -333,12 +362,21 @@ h1 {
         width: 48%;
     }
     .tecnologias_container,
-    .trabajos__container {
+    .trabajos__container,
+    .card{
         max-width: 768px;
     }
 
     .trabajos__item {
         max-width: 45%;
+    }
+    .trabajos__img_cont{
+        height: 230px;
+    }
+    .trabajos__img_cont img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
     .card{
         flex-direction: row;
@@ -361,11 +399,16 @@ h1 {
     .home a{
         font-size: 1.5rem;
     }
+
     .tecnologias_container{
         gap: 15px;
     }
     .tecnologias_container span{
         font-size: 1.5rem;
+    }
+
+    .trabajos__img_cont{
+        height: 300px;
     }
 }
 
@@ -375,6 +418,7 @@ h1 {
     .trabajos__container,
     .card {
         max-width: 1200px;
+        margin: 0 auto;
     }
 
     .imagen img{
